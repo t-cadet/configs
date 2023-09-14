@@ -1,0 +1,13 @@
+# Insert your preferred key mappings here.
+map e LinkHints.activateMode
+map E LinkHints.activateModeToOpenInNewTab
+unmap f
+unmap F
+
+map d scrollUp
+map t scrollLeft
+map s scrollDown
+map r scrollRight
+
+map k scrollPageDown
+map h createTab

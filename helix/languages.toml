@@ -1,0 +1,7 @@
+[[language]]
+name = "c"
+language-server = { command = "" }
+
+[[language]]
+name = "cpp"
+language-server = { command = "" }
