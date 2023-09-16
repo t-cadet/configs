@@ -1,0 +1,104 @@
+(defcfg
+  windows-altgr add-lctl-release
+)
+
+(defsrc
+ $     ''    «     »     lpar  rpar  @     +     -     /     *     =     %     bspc
+ tab   b     é     p     o     è     ^     v     d     l     j     z     w     ç
+ caps  a     u     i     e     ,     c     t     s     r     n     m     ret
+ lsft  à     y     x     .     k     ’     q     g     h     f     rsft
+                               spc
+)
+
+(deflayer base
+ _     _     _     _     _     _     _     _     _     _     _     _     _     _
+ _     _     w     _     _     y     _     _     _     _     _     _     è     @rcaps
+ @caps _     _     _     _     _     _     _     _     _     _     _     _
+ @lsft _     é     _     _     _     @'    _     _     _     _     @rsft
+                               _
+)
+
+(deflayer shiftlayer
+ _     _     _     _     _     _     _     _     _     _     _     _     _     _
+ _     _     _     _     _     _     _     _     _     _     _     _     _     _
+ _     _     _     _     _     _     _     _     _     _     _     _     _
+ _     _     _     _     _     _     ’     _     _     _     _     _
+                               XX
+)
+
+(deflayer capslayer
+ _     _     _     _     _     _     _     _     _     _     _     _     _     _
+ _     _     @1    @2    @3    @0    _     home  up    end   _     _     _     ç
+ _     _     @4    @5    @6    _     esc   left  down  rght  _     _     _
+ _     _     @7    @8    @9    _     ’     @tctl @tsft _     _     _
+                               del
+)
+
+(deflayer rcapslayer
+ _     _     _     _     _     _     _     _     _     _     _     _     _     _
+ _     _     @1    @2    @3    @0    _     home  up    end   _     _     _     _
+ caps  _     @4    @5    @6    _     esc   left  down  rght  _     _     _
+ _     _     @7    @8    @9    _     ’     @tctl @tsft _     _     _
+                               bspc
+)
+
+(defalias
+    caps  (layer-while-held capslayer)
+    rcaps (layer-while-held rcapslayer)
+
+    lsft (multi lsft (layer-while-held shiftlayer))
+    rsft (multi rsft (layer-while-held shiftlayer))
+
+    tctl (fork (on-press-fakekey ctrl press) (on-press-fakekey ctrl release) (lctl))
+    tsft (fork (on-press-fakekey shft press) (on-press-fakekey shft release) (lsft))
+)
+
+(defalias
+    1 S-''
+    2 S-«
+    3 S-»
+    4 S-lpar
+    5 S-rpar
+    6 S-@
+    7 S-+
+    8 S--
+    9 S-/
+    0 S-*
+
+    ;; on windows this does not work in alacritty
+    ;; https://github.com/jtroo/kanata/blob/main/docs/config.adoc#windows-only-windows-altgr
+    ' RA-,
+)
+
+(deffakekeys
+    ctrl lctl
+    shft lsft
+)
+
+(deflocalkeys-win
+ $    222
+ ''    49
+ «     50
+ »     51
+ lpar  52
+ rpar  53
+ @     54
+ +     55
+ -     56
+ /     57
+ *     48
+ =    189
+ %    187
+
+ é    186
+ è    191
+
+ ^    219
+
+ ç    220
+
+ à    221
+
+ ’    192
+)
+
