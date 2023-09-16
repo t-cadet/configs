@@ -1,0 +1,77 @@
+(defsrc
+  grv  1    2    3    4    5    6    7    8    9    0    -    =    bspc
+  tab  q    w    e    r    t    y    u    i    o    p    [    ]    \
+  caps a    s    d    f    g    h    j    k    l    ;    '    ret
+  lsft z    x    c    v    b    n    m    ,    .    /    rsft
+                           spc
+)
+
+(defalias
+ $ grv
+ '' 1
+ « 2
+ » 3
+ lpar 4
+ rpar 5
+ @ 6
+ + 7
+ - 8
+ / 9
+ * 0
+ = -
+ % =
+
+ b q
+ é w
+ p e
+ o r
+ è t
+ ^ y
+ v u
+ d i
+ l o
+ j p
+ z [
+ w ]
+ ç \
+
+ a a
+ u s
+ i d
+ e f
+ , g
+ c h
+ t j
+ s k
+ r l
+ n ;
+ m '
+
+ à z
+ y x
+ x c
+ . v
+ k b
+ ’ n
+ q m
+ g ,
+ h .
+ f /
+)
+
+(defalias
+ 1 S-1
+ 2 S-2
+ 3 S-3
+ 4 S-4
+ 5 S-5
+ 6 S-6
+ 7 S-7
+ 8 S-8
+ 9 S-9
+ 0 S-0
+
+ ' n
+)
+
+(include bepo_mod_common.kbd)

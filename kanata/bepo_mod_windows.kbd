@@ -1,0 +1,110 @@
+(defcfg
+  windows-altgr add-lctl-release
+)
+
+(defsrc
+ $     ''    «     »     lpar  rpar  @     +     -     /     *     =     %     bspc
+ tab   b     é     p     o     è     ^     v     d     l     j     z     w     ç
+ caps  a     u     i     e     ,     c     t     s     r     n     m     ret
+ lsft  à     y     x     .     k     ’     q     g     h     f     rsft
+                               spc
+)
+
+(deflocalkeys-win
+ $    222
+ ''    49
+ «     50
+ »     51
+ lpar  52
+ rpar  53
+ @     54
+ +     55
+ -     56
+ /     57
+ *     48
+ =    189
+ %    187
+
+ é    186
+ è    191
+
+ ^    219
+
+ ç    220
+
+ à    221
+
+ ’    192
+)
+
+(defalias
+ $ $
+ '' ''
+ « «
+ » »
+ lpar lpar
+ rpar rpar
+ @ @
+ + +
+ - -
+ / /
+ * *
+ = -
+ % =
+
+ b b
+ é é
+ p p
+ o o
+ è è
+ ^ ^
+ v v
+ d d
+ l l
+ j j
+ z z
+ w w
+ ç ç
+
+ a a
+ u u
+ i i
+ e e
+ , ,
+ c c
+ t t
+ s s
+ r r
+ n n
+ m m
+
+ à à
+ y y
+ x x
+ . .
+ k k
+ ’ ’
+ q q
+ g g
+ h h
+ f f
+)
+
+(defalias
+ 1 S-''
+ 2 S-«
+ 3 S-»
+ 4 S-lpar
+ 5 S-rpar
+ 6 S-@
+ 7 S-+
+ 8 S--
+ 9 S-/
+ 0 S-*
+
+ ;; on windows this does not work in alacritty
+ ;; https://github.com/jtroo/kanata/blob/main/docs/config.adoc#windows-only-windows-altgr
+ ' RA-,
+)
+
+(include bepo_mod_common.kbd)
