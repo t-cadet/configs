@@ -3,6 +3,7 @@
 )
 
 (defsrc
+       f1    f2    f3    f4    f5    f6    f7    f8    f9    f10   f11   f12
  $     ''    «     »     lpar  rpar  @     +     -     /     *     =     %     bspc
  tab   b     é     p     o     è     ^     v     d     l     j     z     w     ç
  caps  a     u     i     e     ,     c     t     s     r     n     m     ret
@@ -101,6 +102,11 @@
  8 S--
  9 S-/
  0 S-*
+ 
+ f2 M-«       ;; open/show file explorer
+ f6 M-»       ;; open/show outlook
+ f7 M-lpar    ;; open/show terminal
+ f8 M-rpar    ;; open/show browser
 
  ;; on windows this does not work in alacritty
  ;; https://github.com/jtroo/kanata/blob/main/docs/config.adoc#windows-only-windows-altgr

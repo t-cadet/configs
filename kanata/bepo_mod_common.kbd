@@ -1,4 +1,5 @@
 (deflayer base
+       _     @f2   _     _     _     @f6   @f7   @f8   _     _     _     _
  _     _     _     _     _     _     _     _     _     _     _     _     _     _
  _     _     @w    _     _     @y    _     _     _     _     _     _     @è    @rcaps
  @caps _     _     _     _     _     _     _     _     _     _     _     _
@@ -7,6 +8,7 @@
 )
 
 (deflayer shiftlayer
+       _     _     _     _     _     _     _     _     _     _     _     _
  _     _     _     _     _     _     _     _     _     _     _     _     _     _
  _     _     _     _     _     _     _     _     _     _     _     _     _     _
  _     _     _     _     _     _     _     _     _     _     _     _     _
@@ -15,6 +17,7 @@
 )
 
 (deflayer capslayer
+       _     _     _     _     _     _     _     _     _     _     _     _
  _     _     _     _     _     _     _     _     _     _     _     _     _     _
  _     _     @1    @2    @3    @0    _     home  up    end   _     _     _     @ç
  _     _     @4    @5    @6    _     esc   left  down  rght  _     _     _
@@ -23,6 +26,7 @@
 )
 
 (deflayer rcapslayer
+       _     _     _     _     _     _     _     _     _     _     _     _
  _     _     _     _     _     _     _     _     _     _     _     _     _     _
  _     _     @1    @2    @3    @0    _     home  up    end   _     _     _     _
  caps  _     @4    @5    @6    _     esc   left  down  rght  _     _     _
