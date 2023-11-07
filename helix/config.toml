@@ -1,3 +1,13 @@
 [editor]
-whitespace.render.newline = "all"
+auto-pairs = false
+line-number = "relative"
 
+[editor.cursor-shape]
+insert = "bar"
+normal = "block"
+select = "underline"
+
+[editor.whitespace.render]
+tab = "all"
+nbsp = "all"
+newline = "all"

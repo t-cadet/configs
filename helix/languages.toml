@@ -5,3 +5,15 @@ language-server = { command = "" }
 [[language]]
 name = "cpp"
 language-server = { command = "" }
+
+[[language]]
+name = "rust"
+language-server = { command = "" }
+
+[[language]]
+name = "python"
+language-server = { command = "" }
+
+[[language]]
+name = "javascript"
+language-server = { command = "" }
