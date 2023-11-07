@@ -11,3 +11,12 @@ select = "underline"
 tab = "all"
 nbsp = "all"
 newline = "all"
+
+[keys.insert]
+C-t = ["extend_to_line_bounds", ":pipe sh ~/.config/helix/exec.sh 2>&1", "normal_mode", "open_below"]
+
+[keys.normal]
+C-t = ["extend_to_line_bounds", ":pipe sh ~/.config/helix/exec.sh 2>&1"]
+
+[keys.select]
+C-t = [":pipe sh ~/.config/helix/exec.sh 2>&1"]
