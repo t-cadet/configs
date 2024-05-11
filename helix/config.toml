@@ -1,4 +1,7 @@
+theme = "varua"
+
 [editor]
+auto-save = true
 auto-pairs = false
 line-number = "relative"
 
@@ -12,11 +15,33 @@ tab = "all"
 nbsp = "all"
 newline = "all"
 
+[editor.statusline]
+right = ["position", "total-line-numbers", "file-encoding", "file-line-ending"]
+
 [keys.insert]
 C-t = ["extend_to_line_bounds", ":pipe sh ~/.config/helix/exec.sh 2>&1", "normal_mode", "open_below"]
 
 [keys.normal]
 C-t = ["extend_to_line_bounds", ":pipe sh ~/.config/helix/exec.sh 2>&1"]
+"(" = "goto_prev_paragraph"
+")" = "goto_next_paragraph"
+"w" = ["move_prev_word_start", "move_next_word_end"]
+W = ["move_prev_long_word_start", "move_next_long_word_end"]
+"x" = ["extend_line_below"]
+"X" = ["extend_line_above"]
+i = ["collapse_selection", "insert_mode"]
+a = ["collapse_selection", "append_mode"]
+D = ["collapse_selection", "delete_selection"]
+C-r = ["collapse_selection", "replace"]
+"ret" = ["command_mode"]
+"tab" = ["rotate_view"]
 
 [keys.select]
 C-t = [":pipe sh ~/.config/helix/exec.sh 2>&1"]
+"(" = "goto_prev_paragraph"
+")" = "goto_next_paragraph"
+"x" = ["extend_line_down"]
+"X" = ["extend_line_up"]
+"g"."e" = "goto_file_end"
+"ret" = ["command_mode"]
+"tab" = ["rotate_view"]
