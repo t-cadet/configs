@@ -1,0 +1,6 @@
+inherits = "autumn"
+
+"ui.virtual.jump-label" = { fg = "light-magenta", modifiers = ["italic"] }
+keyword = { fg = "light-cyan" }
+"constant.numeric" = { fg = "gold" }
+type = { fg = "my_white3" }

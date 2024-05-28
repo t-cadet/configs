@@ -113,4 +113,17 @@
  ' RA-,
 )
 
+(defalias
+ RA« RA-«
+ RA» RA-»
+ Sà S-à
+ Sé S-é
+)
+
+(defalias
+ { RA-y
+ } RA-x
+ \ RA-à
+)
+
 (include bepo_mod_common.kbd)

@@ -1,19 +1,19 @@
 [[language]]
 name = "c"
-language-server = { command = "" }
+language-servers = []
 
 [[language]]
 name = "cpp"
-language-server = { command = "" }
+language-servers = []
 
 [[language]]
 name = "rust"
-language-server = { command = "" }
+language-servers = []
 
 [[language]]
 name = "python"
-language-server = { command = "" }
+language-servers = []
 
 [[language]]
 name = "javascript"
-language-server = { command = "" }
+language-servers = []

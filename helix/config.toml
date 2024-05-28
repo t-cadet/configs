@@ -1,9 +1,11 @@
-theme = "varua"
+theme = "autumn-jump"
 
 [editor]
 auto-save = true
 auto-pairs = false
 line-number = "relative"
+true-color = true
+jump-label-alphabet = "etisuran,cmovpdwlbjz.qxg}h{fy_"
 
 [editor.cursor-shape]
 insert = "bar"
@@ -25,10 +27,12 @@ C-t = ["extend_to_line_bounds", ":pipe sh ~/.config/helix/exec.sh 2>&1", "normal
 C-t = ["extend_to_line_bounds", ":pipe sh ~/.config/helix/exec.sh 2>&1"]
 "(" = "goto_prev_paragraph"
 ")" = "goto_next_paragraph"
-"w" = ["move_prev_word_start", "move_next_word_end"]
+w = ["move_prev_word_start", "move_next_word_end"]
 W = ["move_prev_long_word_start", "move_next_long_word_end"]
-"x" = ["extend_line_below"]
-"X" = ["extend_line_above"]
+x = ["select_line_below"]
+X = ["select_line_above"]
+"." = ["repeat_last_motion"]
+
 i = ["collapse_selection", "insert_mode"]
 a = ["collapse_selection", "append_mode"]
 D = ["collapse_selection", "delete_selection"]
@@ -40,8 +44,8 @@ C-r = ["collapse_selection", "replace"]
 C-t = [":pipe sh ~/.config/helix/exec.sh 2>&1"]
 "(" = "goto_prev_paragraph"
 ")" = "goto_next_paragraph"
-"x" = ["extend_line_down"]
-"X" = ["extend_line_up"]
+x = ["select_line_below"]
+X = ["select_line_above"]
 "g"."e" = "goto_file_end"
 "ret" = ["command_mode"]
 "tab" = ["rotate_view"]

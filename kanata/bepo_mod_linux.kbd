@@ -80,4 +80,17 @@
  ' n
 )
 
+(defalias
+ RA« RA-2
+ RA» RA-3
+ Sà S-z
+ Sé S-x
+)
+
+(defalias
+ { RA-x
+ } RA-c
+ \ RA-z
+)
+
 (include bepo_mod_common.kbd)
