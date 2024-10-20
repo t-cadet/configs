@@ -7,41 +7,43 @@
 )
 
 (deflayer default
-  @dQQ  XX   XX   XX   XX   XX    XX    XX     XX    XX   XX   XX   XX    _      
-  _     ;    ,    .    p    y     f     g      c     h    l    +    @caps _      
-  @caps a    o    e    u    i     d     r      t     n    s    @d{  @d}          
-  @lsft b    j    k    x    q     m     w      v     z    =    @rsft             
-  _     _    @lalt          _                  @ralt _    _                      
+  XX    XX   XX   XX   XX   XX    XX    XX     XX    XX      XX   XX   XX    _      
+  _     ;    ,    .    u    y     v     f      c     h       l    XX   XX    _      
+  @num  a    o    e    i    p     d     r      t     s       n    +    z            
+  @lsft x    k    j    b    q     m     w      g     @dQQ    =    @rsft             
+  _     _    @lalt          _                  @ralt _       _                      
  )
 
 (deflayer shiftlayer
-  @s'   XX   XX   XX   XX   XX    XX    XX     XX    XX   XX   XX   XX   _       
-  _     @s:  @s<  @s>  p    y     f     g      c     h    l    @s*  @s/  _       
-  @caps a    o    e    u    i     d     r      t     n    s    @slp @srp         
-  @lsft b    j    k    x    q     m     w      v     z    XX   @rsft             
-  _     _    @lalt          esc                @ralt _    _                      
+  @s'   XX   XX   XX   XX   XX    XX    XX     XX    XX      XX   XX    XX   _       
+  _     @sà  @sô  @sé  u    y     v     f      c     h       l    @sè   @sù  _       
+  @num  a    o    e    i    p     d     r      t     s       n    @sê   z            
+  @lsft x    k    j    b    q     m     w      g     @s`     XX   @rsft              
+  _     _    @lalt          @sesc              @ralt _       _                       
  )
 
 (deflayer altlayer
-  @a`   XX   XX   XX   XX   XX    XX    XX     XX    XX   XX   XX   XX   _       
-  _     @aô  @aé  @a$  @a@  XX    XX    @a#    @a%   @aè  @aù  XX   XX   _       
-  @caps @a^  @a\  @a?  @a|  @a[   @a]   @a&    @a!   @a~  @aà  XX   XX           
-  @lsft XX   XX   XX   XX   XX    XX    XX     XX    XX   XX   @rsft             
-  _     _    @lalt          @a_                @ralt _    _                      
+  XX    XX   XX   XX   XX   XX    XX    XX     XX    XX      XX   XX    XX   _       
+  _     @a#  @a?  @a:  @a*  @a@   @a$   @a/    @a&   @a|     @a^  XX    XX   _       
+  @num  @a~  @a[  @a{  @alp @a<   @a>   @arp   @a}   @a]     @a!  @a-   XX           
+  @lsft XX   XX   XX   @a%  XX    XX    @a\    XX    @a'     XX   @rsft              
+  _     _    @lalt          @a_                @ralt _       _                       
  )
 
-(deflayer capslayer
-  XX    XX   XX   XX   XX   mrgt  mlft  @ml    @md   @mu     @mr  @mwu @mwd  _   
-  _     XX   1    2    3    XX    XX    C-left up    C-rght  XX   XX   XX    _   
-  @caps XX   4    5    6    XX    XX    left   down  rght    XX   XX   XX        
-  @lsft XX   7    8    9    XX    XX    home   XX    end     XX   @rsft          
-  _     _    @lalt          0                  @ralt _       _                   
+(deflayer numlayer
+  XX    XX   XX   XX   XX   mrgt  mlft  @ml    @md   @mu     @mr   @mwu @mwd  _   
+  _     XX   1    2    3    XX    XX    C-left up    C-rght  XX    XX   XX    _   
+  @num  XX   4    5    6    bspc  del   left   down  rght    @num  XX   XX        
+  @lsft XX   7    8    9    XX    XX    home   XX    end     XX    @rsft          
+  _     _    @lalt          0                  @ralt _       _                    
  )
 
 (defalias
 d{ S-[
 d} S-]
 dQQ S-'
+lp S-9
+rp S-0
 )
 
 (defalias
@@ -89,6 +91,14 @@ s/ (multi (release-key lsft) (release-key rsft) /)
 s[ (multi (release-key lsft) (release-key rsft) [)
 s] (multi (release-key lsft) (release-key rsft) ])
 s` (multi (release-key lsft) (release-key rsft) `)
+sesc (multi (release-key lsft) (release-key rsft) esc)
+
+sé (multi (release-key lsft) (release-key rsft) (unicode é))
+sè (multi (release-key lsft) (release-key rsft) (unicode è))
+sê (multi (release-key lsft) (release-key rsft) (unicode ê))
+sô (multi (release-key lsft) (release-key rsft) (unicode ô))
+sà (multi (release-key lsft) (release-key rsft) (unicode à))
+sù (multi (release-key lsft) (release-key rsft) (unicode ù))
 
 )
 
@@ -105,15 +115,26 @@ a~ (multi (release-key lalt) (release-key ralt) S-`)
 a? (multi (release-key lalt) (release-key ralt) S-/)
 a| (multi (release-key lalt) (release-key ralt) S-\)
 a\ (multi (release-key lalt) (release-key ralt) \)
+a/ (multi (release-key lalt) (release-key ralt) /)
 a[ (multi (release-key lalt) (release-key ralt) [)
 a] (multi (release-key lalt) (release-key ralt) ])
+a{ (multi (release-key lalt) (release-key ralt) S-{)
+a} (multi (release-key lalt) (release-key ralt) S-})
+a< (multi (release-key lalt) (release-key ralt) S-,)
+a> (multi (release-key lalt) (release-key ralt) S-.)
+a: (multi (release-key lalt) (release-key ralt) S-;)
 a` (multi (release-key lalt) (release-key ralt) `)
+a' (multi (release-key lalt) (release-key ralt) ')
 a_ (multi (release-key lalt) (release-key ralt) S--)
+a- (multi (release-key lalt) (release-key ralt) -)
 aé (multi (release-key lalt) (release-key ralt) (unicode é))
 aè (multi (release-key lalt) (release-key ralt) (unicode è))
 aô (multi (release-key lalt) (release-key ralt) (unicode ô))
 aà (multi (release-key lalt) (release-key ralt) (unicode à))
 aù (multi (release-key lalt) (release-key ralt) (unicode ù))
+az (multi (release-key lalt) (release-key ralt) z)
+alp (multi (release-key lalt) (release-key ralt) S-9)
+arp (multi (release-key lalt) (release-key ralt) S-0)
 )
 
 (defalias
@@ -123,7 +144,7 @@ aù (multi (release-key lalt) (release-key ralt) (unicode ù))
   lalt (multi lalt (layer-while-held altlayer))
   ralt (multi ralt (layer-while-held altlayer))
 
-  caps (layer-while-held capslayer)
+  num  (layer-while-held numlayer)
 )
 
 (defalias
