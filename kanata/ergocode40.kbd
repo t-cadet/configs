@@ -1,0 +1,137 @@
+(defsrc
+  grv  1    2    3    4    5    6    7    8    9    0    -    =    bspc
+  tab  q    w    e    r    t    y    u    i    o    p    [    ]    ret
+  caps a    s    d    f    g    h    j    k    l    ;    '    \
+  lsft z    x    c    v    b    n    m    ,    .    /    rsft
+  lctl lmet lalt           spc            ralt rmet rctl
+)
+
+(deflayer default
+  @dQQ  XX   XX   XX   XX   XX    XX    XX     XX    XX   XX   XX   XX    _      
+  _     ;    ,    .    p    y     f     g      c     h    l    +    @caps _      
+  @caps a    o    e    u    i     d     r      t     n    s    @d{  @d}          
+  @lsft b    j    k    x    q     m     w      v     z    =    @rsft             
+  _     _    @lalt          _                  @ralt _    _                      
+ )
+
+(deflayer shiftlayer
+  @s'   XX   XX   XX   XX   XX    XX    XX     XX    XX   XX   XX   XX   _       
+  _     @s:  @s<  @s>  p    y     f     g      c     h    l    @s*  @s/  _       
+  @caps a    o    e    u    i     d     r      t     n    s    @slp @srp         
+  @lsft b    j    k    x    q     m     w      v     z    XX   @rsft             
+  _     _    @lalt          esc                @ralt _    _                      
+ )
+
+(deflayer altlayer
+  @a`   XX   XX   XX   XX   XX    XX    XX     XX    XX   XX   XX   XX   _       
+  _     @aô  @aé  @a$  @a@  XX    XX    @a#    @a%   @aè  @aù  XX   XX   _       
+  @caps @a^  @a\  @a?  @a|  @a[   @a]   @a&    @a!   @a~  @aà  XX   XX           
+  @lsft XX   XX   XX   XX   XX    XX    XX     XX    XX   XX   @rsft             
+  _     _    @lalt          @a_                @ralt _    _                      
+ )
+
+(deflayer capslayer
+  XX    XX   XX   XX   XX   mrgt  mlft  @ml    @md   @mu     @mr  @mwu @mwd  _   
+  _     XX   1    2    3    XX    XX    C-left up    C-rght  XX   XX   XX    _   
+  @caps XX   4    5    6    XX    XX    left   down  rght    XX   XX   XX        
+  @lsft XX   7    8    9    XX    XX    home   XX    end     XX   @rsft          
+  _     _    @lalt          0                  @ralt _       _                   
+ )
+
+(defalias
+d{ S-[
+d} S-]
+dQQ S-'
+)
+
+(defalias
+s! 1
+s@ 2
+s# 3
+s$ 4
+s% 5
+s^ 6
+s& 7
+s* 8
+slp 9
+srp 0
+s_ -
+s+ =
+
+s: ;
+s< ,
+s> .
+s? /
+s| \
+s{ [
+s} ]
+s~ `
+
+s1 (multi (release-key lsft) (release-key rsft) 1)
+s2 (multi (release-key lsft) (release-key rsft) 2)
+s3 (multi (release-key lsft) (release-key rsft) 3)
+s4 (multi (release-key lsft) (release-key rsft) 4)
+s5 (multi (release-key lsft) (release-key rsft) 5)
+s6 (multi (release-key lsft) (release-key rsft) 6)
+s7 (multi (release-key lsft) (release-key rsft) 7)
+s8 (multi (release-key lsft) (release-key rsft) 8)
+s9 (multi (release-key lsft) (release-key rsft) 9)
+s0 (multi (release-key lsft) (release-key rsft) 0)
+s- (multi (release-key lsft) (release-key rsft) -)
+s= (multi (release-key lsft) (release-key rsft) =)
+
+s; (multi (release-key lsft) (release-key rsft) ;)
+s, (multi (release-key lsft) (release-key rsft) ,)
+s. (multi (release-key lsft) (release-key rsft) .)
+s' (multi (release-key lsft) (release-key rsft) ')
+s\ (multi (release-key lsft) (release-key rsft) \)
+s/ (multi (release-key lsft) (release-key rsft) /)
+s[ (multi (release-key lsft) (release-key rsft) [)
+s] (multi (release-key lsft) (release-key rsft) ])
+s` (multi (release-key lsft) (release-key rsft) `)
+
+)
+
+(defalias
+a! (multi (release-key lalt) (release-key ralt) S-1)
+a@ (multi (release-key lalt) (release-key ralt) S-2)
+a# (multi (release-key lalt) (release-key ralt) S-3)
+a$ (multi (release-key lalt) (release-key ralt) S-4)
+a% (multi (release-key lalt) (release-key ralt) S-5)
+a^ (multi (release-key lalt) (release-key ralt) S-6)
+a& (multi (release-key lalt) (release-key ralt) S-7)
+a* (multi (release-key lalt) (release-key ralt) S-8)
+a~ (multi (release-key lalt) (release-key ralt) S-`)
+a? (multi (release-key lalt) (release-key ralt) S-/)
+a| (multi (release-key lalt) (release-key ralt) S-\)
+a\ (multi (release-key lalt) (release-key ralt) \)
+a[ (multi (release-key lalt) (release-key ralt) [)
+a] (multi (release-key lalt) (release-key ralt) ])
+a` (multi (release-key lalt) (release-key ralt) `)
+a_ (multi (release-key lalt) (release-key ralt) S--)
+aé (multi (release-key lalt) (release-key ralt) (unicode é))
+aè (multi (release-key lalt) (release-key ralt) (unicode è))
+aô (multi (release-key lalt) (release-key ralt) (unicode ô))
+aà (multi (release-key lalt) (release-key ralt) (unicode à))
+aù (multi (release-key lalt) (release-key ralt) (unicode ù))
+)
+
+(defalias
+  lsft (multi lsft (layer-while-held shiftlayer))
+  rsft (multi rsft (layer-while-held shiftlayer))
+
+  lalt (multi lalt (layer-while-held altlayer))
+  ralt (multi ralt (layer-while-held altlayer))
+
+  caps (layer-while-held capslayer)
+)
+
+(defalias
+  mu (movemouse-accel-up 5 500 1 5)
+  ml (movemouse-accel-left 5 500 1 5)
+  md (movemouse-accel-down 5 500 1 5)
+  mr (movemouse-accel-right 5 500 1 5)
+  mwu (mwheel-up 50 120)
+  mwd (mwheel-down 50 120)
+)
+
