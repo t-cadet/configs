@@ -3,6 +3,10 @@ theme = "autumn-jump"
 [editor]
 auto-save = true
 auto-pairs = false
+auto-format = false
+auto-completion = false
+completion-replace = true
+# auto-info = false
 line-number = "relative"
 true-color = true
 jump-label-alphabet = "etisuran,cmovpdwlbjz.qxg}h{fy_"
@@ -20,11 +24,16 @@ newline = "all"
 [editor.statusline]
 right = ["position", "total-line-numbers", "file-encoding", "file-line-ending"]
 
+[editor.lsp]
+auto-signature-help = false
+display-signature-help-docs = false
 [keys.insert]
-C-t = ["extend_to_line_bounds", ":pipe sh ~/.config/helix/exec.sh 2>&1", "normal_mode", "open_below"]
+# C-t = ["extend_to_line_bounds", ":pipe sh ~/.config/helix/exec.sh 2>&1", "normal_mode", "open_below"]
+C-t = ["extend_to_line_bounds", ":pipe sh ~/.config/helix/exec.sh 2>&1", "normal_mode"]
 
 [keys.normal]
-C-t = ["extend_to_line_bounds", ":pipe sh ~/.config/helix/exec.sh 2>&1"]
+C-t = ["extend_to_line_bounds", ":pipe sh ~/.config/helix/exec.sh 2>&1", "flip_selections"]
+"?" = [":pipe-to toggleDiagnostics", ":config-reload"]
 "(" = "goto_prev_paragraph"
 ")" = "goto_next_paragraph"
 w = ["move_prev_word_start", "move_next_word_end"]
@@ -38,6 +47,7 @@ a = ["collapse_selection", "append_mode"]
 D = ["collapse_selection", "delete_selection"]
 C-r = ["collapse_selection", "replace"]
 "ret" = ["command_mode"]
+"esc" = ["command_mode"]
 "tab" = ["rotate_view"]
 
 [keys.select]

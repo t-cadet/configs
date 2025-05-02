@@ -1,10 +1,12 @@
 [[language]]
 name = "c"
-language-servers = []
+# language-servers = []
+language-servers = [{ name = "clangd", except-features = [ "diagnostics" ] }]
 
 [[language]]
 name = "cpp"
-language-servers = []
+# language-servers = []
+language-servers = [{ name = "clangd", except-features = [ "diagnostics" ] }]
 
 [[language]]
 name = "rust"
