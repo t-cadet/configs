@@ -1,7 +1,7 @@
 {
   "combo": [
     [
-      "KC_NO",
+      "OSM(MOD_LGUI)",
       "KC_NO",
       "KC_NO",
       "KC_NO",
@@ -769,7 +769,7 @@
         -1,
         -1,
         "LSFT(KC_RBRACKET)",
-        "OSM(MOD_RGUI)",
+        "KC_LGUI",
         "KC_RBRACKET",
         -1
       ]
@@ -777,7 +777,7 @@
     [
       [
         "TO(0)",
-        "RALT_T(KC_G)",
+        "RALT(KC_G)",
         "LSFT(KC_U)",
         "LSFT(KC_O)",
         "LSFT(KC_Y)",
@@ -1073,7 +1073,12 @@
   ],
   "layout_options": 0,
   "macro": [
-    [],
+    [
+      [
+        "up",
+        "KC_LGUI"
+      ]
+    ],
     [],
     [],
     [],
@@ -1109,8 +1114,8 @@
     "4": 175,
     "5": 2,
     "6": 5000,
-    "7": 100,
-    "8": 7,
+    "7": 150,
+    "8": 3,
     "9": 10
   },
   "tap_dance": [
