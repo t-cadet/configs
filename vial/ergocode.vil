@@ -725,7 +725,7 @@
         "KC_SCOLON",
         "LSFT(KC_Z)",
         "KC_LBRACKET",
-        "KC_NONUS_BSLASH",
+        "KC_BSLASH",
         -1
       ],
       [
@@ -759,7 +759,7 @@
         "KC_NO",
         "LSFT(KC_6)",
         "LSFT(KC_7)",
-        "LSFT(KC_NONUS_BSLASH)",
+        "LSFT(KC_BSLASH)",
         "LSFT(KC_B)",
         "LSFT(KC_W)",
         -1
@@ -769,7 +769,7 @@
         -1,
         -1,
         "LSFT(KC_RBRACKET)",
-        "KC_LGUI",
+        "M0",
         "KC_RBRACKET",
         -1
       ]
@@ -1075,7 +1075,8 @@
   "macro": [
     [
       [
-        "up",
+        "tap",
+        "KC_PAUSE",
         "KC_LGUI"
       ]
     ],
